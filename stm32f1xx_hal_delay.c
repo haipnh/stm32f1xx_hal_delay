@@ -20,7 +20,7 @@ void DelayMs(uint32_t ms){
 }
 
 void DelayInit(void){
-	  __HAL_RCC_TIM2_CLK_ENABLE();
+    __HAL_RCC_TIM2_CLK_ENABLE();
     TIM2->PSC = (HAL_RCC_GetPCLK2Freq() / 1000000) - 1;
     TIM2->ARR = 0xFFFF;
     TIM2->CR1 = TIM_CR1_CEN;
